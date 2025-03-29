@@ -9,7 +9,7 @@ import {
 } from "admister";
 import { Qine } from "qin_case";
 
-const base = Qine.qinpel.chief.loadConfig(Qine.qinpel.our.names.QinBaseSelected);
+const base = Qine.qinpel.window.loadConfig(Qine.qinpel.ours.consts.QIN_BASE_SELECTED);
 
 export const registry = AdModules.PEOPLE.registry;
 
