@@ -1,27 +1,20 @@
-import {
-  AdExpect,
-  AdModule,
-  AdModules,
-  AdRegBased,
-  AdRegister,
-  AdRegistry,
-  AdTools,
-} from "admister";
+import { AdExpect, AdModule, AdModules, AdRegBased, AdRegister, AdTools } from "admister";
 import { Qine } from "qin_case";
+import { Registry } from "qin_soul";
 
 const base = Qine.qinpel.window.loadConfig(Qine.qinpel.ours.consts.QIN_BASE_SELECTED);
 
 export const tableHead = AdModules.STATE.tableHead;
 
-export const registry: AdRegistry = { base, tableHead };
+export const registry: Registry = { base, tableHead };
 
 export const register: AdRegBased = {
     registry,
-    joins: [
+    joinList: [
         {
             module: AdModules.NATION,
             alias: "nation",
-            filters: [{ linked: { name: "pais", with: "codigo" } }],
+            filterList: [{ linked: { name: "pais", upon: "codigo" } }],
         },
     ],
 };
