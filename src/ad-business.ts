@@ -13,9 +13,9 @@ export const regBased: AdRegBased = { registry };
 export class AdBusiness extends AdRegister {
     public constructor(module: AdModule, expect: AdExpect) {
         super(module, expect, regBased);
-        this.addField(AdTools.newAdFieldString("codigo", "Código", 4).putKey());
+        this.addField(AdTools.newAdFieldChars("codigo", "Código", 4).putKey());
         this.addField(AdTools.newAdFieldAtivo());
-        this.addField(AdTools.newAdFieldString("nome", "Nome", 60));
+        this.addField(AdTools.newAdFieldChars("nome", "Nome", 60));
         this.prepare();
     }
 }

@@ -30,13 +30,13 @@ export const regBased: AdRegBased = {
 export class AdCity extends AdRegister {
     public constructor(module: AdModule, expect: AdExpect) {
         super(module, expect, regBased);
-        this.addField(AdTools.newAdFieldString("codigo", "Código", 6).putKey());
+        this.addField(AdTools.newAdFieldChars("codigo", "Código", 6).putKey());
         this.addField(AdTools.newAdFieldAtivo());
-        this.addField(AdTools.newAdFieldString("pais", "País - Cód.", 4));
-        this.addField(AdTools.newAdFieldString("nation.nome", "País - Nome", 60));
-        this.addField(AdTools.newAdFieldString("estado", "Estado - Cód.", 4));
-        this.addField(AdTools.newAdFieldString("state.nome", "Estado - Nome", 60));
-        this.addField(AdTools.newAdFieldString("nome", "Nome", 60));
+        this.addField(AdTools.newAdFieldChars("pais", "País - Cód.", 4));
+        this.addField(AdTools.newAdFieldChars("nation.nome", "País - Nome", 60));
+        this.addField(AdTools.newAdFieldChars("estado", "Estado - Cód.", 4));
+        this.addField(AdTools.newAdFieldChars("state.nome", "Estado - Nome", 60));
+        this.addField(AdTools.newAdFieldChars("nome", "Nome", 60));
         this.prepare();
     }
 }
